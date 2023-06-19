@@ -1,28 +1,22 @@
-const name = 'rocky'
-
-const skill = () => {
-    return '放大招'
-}
-const song = [
-    {
-        id: 1, name: '知心绝对'
-    },
-    {
-        id: 2, name: '像我这样人'
-    },
-    {
-        id: 3, name: '南山南'
+const getHtag = (type) => {
+    if(type === 1) {
+        return <h1> this is h1</h1>
     }
 
-]
-const flag = true
+    if(type === 2) {
+        return  <h2> this is h2</h2>
+    }
+
+    if(type === 3) {
+        return  <h3> this is h3</h3>
+    }
+}
 
 function App() {
     return (
         <div className="App">
-            <ul>
-                {song.map(song => <li key={song.id}>{song.name} </li>)}
-            </ul>
+            {getHtag(1)}
+            {getHtag(2)}
         </div>
     );
 }
