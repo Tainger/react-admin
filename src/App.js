@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
+
+const name = 'rocky'
+
+const skill = () => {
+  return '放大招'
+}
+
+const flag = true
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {name}
+      {skill()}
+      {flag ? '很聪明':'很笨'}
     </div>
   );
 }
