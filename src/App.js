@@ -1,12 +1,15 @@
-function Hello (){
+import React from 'react'
 
-    return (<div> hello</div>)
+class HelloComponent extends React.Component {
+    render() {
+        return (<div> Hello Component </div>)
+    }
 }
 
 function App() {
     return (
         <div className="App">
-           <Hello></Hello>
+            <HelloComponent></HelloComponent>
         </div>
     );
 }
