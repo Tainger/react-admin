@@ -3,13 +3,21 @@ import React from 'react'
 class CounterCounter extends React.Component {
 
 
+    /**
+     * state = (这里是等于)
+     * @type {{counter: number}}
+     */
     state = {
-        name:'test'
+        counter:0
     }
 
-    changeName = (e)=>{
+    /**
+     * counter2 = ()
+     * @type {{counter: number}}
+     */
+    counter2 = () => {
         this.setState({
-            name:e.target.value
+            counter: this.state.counter + 1
         })
     }
 
@@ -18,7 +26,8 @@ class CounterCounter extends React.Component {
 
         return (
             <div>
-                请输入姓名:<input type="text" value={this.state.name} onChange={this.changeName}></input>
+                <h1>点击次数是: {this.state.counter}</h1>
+                <button onClick={this.counter2}>点击一下</button>
             </div>
         )
     }
