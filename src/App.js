@@ -1,22 +1,42 @@
 import React from 'react'
 
-class HelloComponent extends React.Component {
+class CounterCounter extends React.Component {
 
-     event2 = (e, msg) => {
-         e.preventDefault()
-         console.log(e)
-        console.log(msg)
+
+    /**
+     * state = (这里是等于)
+     * @type {{counter: number}}
+     */
+    state = {
+        counter:0
     }
 
+    /**
+     * counter2 = ()
+     * @type {{counter: number}}
+     */
+    counter2 = () => {
+        this.setState({
+            counter: this.state.counter + 1
+        })
+    }
+
+
     render() {
-        return (<div onClick={(e)=>this.event2(e, 'hell0')}> <a href= "https://www.baidu.com"> 百度一下</a></div>)
+
+        return (
+            <div>
+                <h1>点击次数是: {this.state.counter}</h1>
+                <button onClick={this.counter2}>点击一下</button>
+            </div>
+        )
     }
 }
 
 function App() {
     return (
         <div className="App">
-            <HelloComponent></HelloComponent>
+            <CounterCounter></CounterCounter>
         </div>
     );
 }
