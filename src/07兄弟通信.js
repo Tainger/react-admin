@@ -2,7 +2,6 @@ import React from 'react'
 
 class SonA extends  React.Component {
 
-
     render() {
         this.props.callback('你好')
         return (<div> 父亲节点穿出来的值:{this.props.msg}</div>);
