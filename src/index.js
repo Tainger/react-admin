@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App08 from './09阶段练习02';
+import App08 from './10children属性';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
