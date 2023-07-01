@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App08 from './mobx/01Counter';
+import App08 from './mobx/01CounterApp';
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App08 />
+    <div>
+
+        <h1>mobx的第一个Store 和 computed属性</h1>
+        <h1>mobx 练习</h1>
+        <App08/>
+        <h1>mobx todomvc</h1>
+        <h1>React Admin</h1>
+        <App/>
+    </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

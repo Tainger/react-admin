@@ -1,44 +1,21 @@
 import React from 'react'
 
-class SonA extends  React.Component {
-
-
-    render() {
-        this.props.callback('你好')
-        return (<div> 父亲节点穿出来的值:{this.props.msg}</div>);
-    }
-}
-
-
-function SonB(props){
+import {Routes, BrowserRouter, Route, Link} from 'react-router-dom'
+import Layout from "./pages/Layout";
+import Login from "./pages/Login";
+function App() {
     return (
-        <div>SonB的父亲节点传出来的值:{props.msg2}</div>
+        <BrowserRouter>
+            <div className="App">
+                <Link to="/">首页</Link>
+                <Link to="/login">登陆</Link>
+                <Routes>
+                    <Route path='/' element={<Layout/>}></Route>
+                    <Route path='/login' element={<Login/>}></Route>
+                </Routes>
+            </div>
+        </BrowserRouter>
     )
 }
 
-
-class Parent extends React.Component {
-
-
-    state = {
-        name:'test'
-    }
-
-    changeMsg = (sonMsg) => {
-        this.setState({
-            name:sonMsg
-        })
-    }
-
-    render() {
-
-        return (
-            <div>
-                <SonA msg = {this.state.name} callback={this.changeMsg}></SonA>
-                <SonB msg2 = {this.state.name}></SonB>
-            </div>
-        )
-    }
-}
-
-export default Parent;
+export default App;
