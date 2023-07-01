@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App08 from './mobx/01CounterApp';
-import App from "./App";
+import '@/index.css';
+import App08 from '@/mobx/01CounterApp';
+import App from "@/App";
 import {Button} from 'antd'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
