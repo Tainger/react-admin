@@ -3,6 +3,7 @@ import React from 'react'
 import {Routes, BrowserRouter, Route, Link} from 'react-router-dom'
 import Layout from "./pages/Layout";
 import Login from "./pages/Login";
+import 'antd/dist/antd.min.css'
 function App() {
     return (
         <BrowserRouter>

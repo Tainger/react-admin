@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App08 from './mobx/01CounterApp';
 import App from "./App";
+import {Button} from 'antd'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,11 @@ root.render(
         <h1>mobx todomvc</h1>
         <h1>React Admin</h1>
         <App/>
+
+           <Button>
+                   DIANJIE
+                   DIANJIE
+           </Button>
     </div>
 );
 
