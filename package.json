@@ -23,7 +23,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "api": "node apigen.js"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "swagger-parser": "^10.0.3"
   }
 }
